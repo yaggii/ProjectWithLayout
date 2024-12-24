@@ -1,0 +1,12 @@
+Create the following image files in the public/images directory:
+- bangladesh-landscape.jpg
+- philippines-forest.jpg
+- solar-battery.jpg
+- ai-predictive.jpg
+- agriculture.jpg
+- democracy.jpg
+- digital.jpg
+- gender.jpg
+- health.jpg
+
+These images should match the style and content shown in the reference image.
