@@ -8,31 +8,30 @@ export default function SolutionCard({ solution }) {
     : `${import.meta.env.VITE_SUPABASE_URL}/storage/v1/object/public/solution-files/images/placeholder.jpg`;
 
   return (
-    <Link
-      to={`/solutions/${solution.id}`}
-      className="block bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-    >
+    <div>
 
-      <div className="relative h-48">
-        <img
-          src={imageUrl}
-          alt={solution.title}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute bottom-[10px] left-[25px] px-3 py-1 text-sm font-medium text-primary bg-white/80 backdrop-blur-sm rounded-full flex items-center gap-2">
-          <Handshake className="w-4 h-4" />
-          {solution.technical_area}
+      <Link
+        to={`/solutions/${solution.id}`}
+        className="block bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+      >
+        <div className="relative w-[340px] h-[340px]">
+          <img
+            src={imageUrl}
+            alt={solution.title}
+            className="absolute inset-0 w-[340px] h-[340px] object-cover"
+          />
+          <div className="absolute bottom-[40px] left-[25px] px-3 py-1 text-sm font-medium text-primary bg-white/80 backdrop-blur-sm rounded-full flex items-center gap-2">
+            <Handshake className="w-4 h-4 flex-shrink-0" />
+            <span className="max-w-[200px] whitespace-normal overflow-wrap-anywhere break-words">{solution.technical_area}</span>
+          </div>
         </div>
-      </div>
+      </Link>
+
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-2 line-clamp-2">{solution.title}</h3>
+        <h3 className="text-2xl font-semibold mb-2 line-clamp-2">{solution.title}</h3>
+        <p className="mb-4 font-medium text-xl line-clamp-3">{solution.country}</p>
         <p className="text-gray-600 mb-4 line-clamp-3">{solution.description}</p>
-        <div className="text-sm text-gray-500">
-          {solution.country}
-        </div>
       </div>
-
-      
-    </Link>
+    </div>
   );
 }
