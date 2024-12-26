@@ -16,8 +16,9 @@ export default function HighlightedSolutions() {
             See All Solutions
           </button>
         </div>
-        <p className="text-gray-600 font-normal text-lg mt-1">Discover solutions around the world</p>
-        <p className="text-gray-600 font-normal text-lg mt-1">that are scaling with Chemonics</p>
+        <div className="text-gray-600 font-normal text-lg">Discover solutions around the world</div>
+        <div className="text-gray-600 font-normal text-lg -mt-2">that are scaling with Chemonics</div>
+        <br/><br />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[...Array(4)].map((_, i) => (
             <div key={i} className="animate-pulse">
@@ -42,8 +43,9 @@ export default function HighlightedSolutions() {
             See All Solutions
           </button>
         </div>
-        <p className="text-gray-600 font-normal text-lg mt-1">Discover solutions around the world</p>
-        <p className="text-gray-600 font-normal text-lg mt-1">that are scaling with Chemonics</p>
+        <div className="text-gray-600 font-normal text-lg">Discover solutions around the world</div>
+        <div className="text-gray-600 font-normal text-lg -mt-2">that are scaling with Chemonics</div>
+        <br/><br />
         <div className="bg-orange-50 border border-orange-200 rounded-2xl p-4 text-orange-800">
           <p className="flex items-center gap-2">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,8 +72,9 @@ export default function HighlightedSolutions() {
             See All Solutions
           </button>
         </div>
-        <p className="text-gray-600 font-normal text-lg mt-1">Discover solutions around the world</p>
-        <p className="text-gray-600 font-normal text-lg mt-1">that are scaling with Chemonics</p>
+        <div className="text-gray-600 font-normal text-lg">Discover solutions around the world</div>
+        <div className="text-gray-600 font-normal text-lg -mt-2">that are scaling with Chemonics</div>
+        <br/><br />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 rounded-2xl">
           {solutions.map((solution) => (
             <SolutionCard key={solution.id} solution={solution} />
