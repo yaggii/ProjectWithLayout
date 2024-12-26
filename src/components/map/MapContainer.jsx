@@ -42,16 +42,16 @@ export default function MapWrapper({ locations }) {
 
         {/* Statistics Section */}
         <div className="flex gap-4">
-          <div className="bg-orange-200 text-orange-800 px-3 py-1 rounded-full text-center">
+          <div className="bg-orange-600 text-white font-semibold px-3 py-1 rounded-full text-center">
             {locations.length} Solutions
           </div>
-          <div className="bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full text-center">
+          <div className="bg-yellow-600 text-white font-semibold px-3 py-1 rounded-full text-center">
             {locations.length} Projects
           </div>
-          <div className="bg-green-200 text-green-800 px-3 py-1 rounded-full text-center">
+          <div className="bg-green-600 text-white font-semibold px-3 py-1 rounded-full text-center">
           {new Set(locations.map(location => location.country)).size} Countries
           </div>
-          <div className="bg-lime-200 text-lime-800 px-3 py-1 rounded-full text-center">
+          <div className="bg-lime-600 text-white font-semibold px-3 py-1 rounded-full text-center">
             2 Technical Areas
           </div>
         </div>
