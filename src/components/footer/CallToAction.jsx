@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function CallToAction() {
   return (
-    <div className="bg-[#F4863B] text-white mx-auto w-8/12 rounded-[30px] px-4 py-14">
+    <div className="bg-[#F4863B] text-white mx-auto rounded-[30px] px-4 py-14">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="space-y-4">

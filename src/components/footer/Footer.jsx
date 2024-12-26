@@ -8,9 +8,19 @@ export default function Footer() {
   const isLoginPage = location.pathname === '/login';
 
   return (
-    <footer className="space-y-4">
-      {!isLoginPage && <CallToAction />}
+    <div>
+      <div className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4">
+          <footer className="space-y-4">
+            {!isLoginPage && <CallToAction />}
+          </footer>
+        </div>
+      </div>
       <MainFooter />
-    </footer>
+    </div>
+    // <footer className="space-y-4">
+    //   {!isLoginPage && <CallToAction />}
+    //   <MainFooter />
+    // </footer>
   );
 }
