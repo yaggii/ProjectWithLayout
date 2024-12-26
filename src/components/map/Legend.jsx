@@ -20,7 +20,7 @@ export default function Legend({ locations, onCountrySelect }) {
             onClick={() => handleCountryClick(country)}
             className="flex items-center text-sm w-full hover:bg-gray-50 p-1 rounded transition-colors"
           >
-            <span className="w-3 h-3 bg-[#F4863B] opacity-60 mr-2"></span>
+            <span className="w-3 h-3 bg-[#ADD8E6] opacity-60 mr-2"></span>
             <span>{country}</span>
           </button>
         ))}

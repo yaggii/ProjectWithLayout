@@ -12,7 +12,7 @@ export default function CountryLayer({ locations }) {
   if (loading || error || !boundaries) return null;
 
   const countryStyle = {
-    fillColor: '#F4863B',
+    fillColor: '#ADD8E6', // Light blue
     fillOpacity: 0.6,
     color: '#000',
     weight: 1,

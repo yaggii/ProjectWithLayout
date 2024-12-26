@@ -28,7 +28,7 @@ export default function SolutionHeader({ solution }) {
             </div> */}
           </div>
           
-          <h3 className="text-3xl font-bold mb-4 text-white">{solution.title}</h3>
+          <h3 className="text-6xl font-semibold mb-4 text-white">{solution.title}, {solution.country}</h3>
           
           {/* <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, index) => (

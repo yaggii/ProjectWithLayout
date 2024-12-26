@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import CountryLayer from './CountryLayer';
 import Legend from './Legend';
@@ -8,18 +8,45 @@ import 'leaflet/dist/leaflet.css';
 // Component to handle map operations
 function MapController({ country }) {
   const map = useMap();
+  const worldBounds = [[60, -170], [-60, 170]]; // Reasonable world bounds
+  const animationDuration = 1.5;
+  const resetTimeoutRef = useRef(null);
   
-  React.useEffect(() => {
+  useEffect(() => {
+    if (resetTimeoutRef.current) {
+      clearTimeout(resetTimeoutRef.current);
+    }
+
     if (country) {
       const bounds = getCountryBounds(country);
       if (bounds) {
         map.flyToBounds(bounds, {
           padding: [50, 50],
-          duration: 1.5,
+          duration: animationDuration,
           easeLinearity: 0.25
         });
+
+        resetTimeoutRef.current = setTimeout(() => {
+          map.flyToBounds(worldBounds, {
+            padding: [50, 50],
+            duration: animationDuration,
+            easeLinearity: 0.25
+          });
+        }, 5000);
       }
+    } else {
+      map.flyToBounds(worldBounds, {
+        padding: [50, 50],
+        duration: animationDuration,
+        easeLinearity: 0.25
+      });
     }
+
+    return () => {
+      if (resetTimeoutRef.current) {
+        clearTimeout(resetTimeoutRef.current);
+      }
+    };
   }, [country, map]);
 
   return null;
@@ -31,7 +58,7 @@ export default function MapWrapper({ locations }) {
   return (
     
     
-    <div className="p-6">
+    <div>
       {/* Title and Statistics Section */}
       <div className="flex justify-between items-center mb-6">
         {/* Title */}
@@ -58,7 +85,7 @@ export default function MapWrapper({ locations }) {
       </div>
 
       {/* Map Section */}
-      <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+      <div className="relative h-[400px] rounded-[30px] overflow-hidden shadow-xl">
         <MapContainer
           center={[20, 0]}
           zoom={2}
@@ -79,12 +106,16 @@ export default function MapWrapper({ locations }) {
               language: 'en',
               subdomains: 'abc',
               minZoom: 2,
-              maxZoom: 8,
+              maxZoom: 8
             }}
           />
           <CountryLayer locations={locations} />
           <MapController country={selectedCountry} />
         </MapContainer>
+        <Legend 
+          locations={locations} 
+          onCountrySelect={setSelectedCountry}
+        />
       </div>
     </div>
   );

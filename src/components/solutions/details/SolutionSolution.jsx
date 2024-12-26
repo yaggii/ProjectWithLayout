@@ -9,7 +9,7 @@ export default function SolutionOverview({ solution }) {
     <div className="flex gap-8">
       <div className="w-7/12">
         <div className="text-orange-500 font-medium mb-2">SOLUTION</div>
-        <h2 className="text-4xl font-bold mb-4">{solution.title}</h2>
+        <h2 className="text-4xl font-semibold mb-4">{solution.title}</h2>
         <div className="flex flex-wrap gap-2 mb-4">
           {tags.map((tag, index) => {
             const getColorClass = (index) => {
