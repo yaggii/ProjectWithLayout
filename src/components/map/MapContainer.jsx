@@ -99,6 +99,11 @@ export default function MapWrapper({ locations }) {
           tap={false}
         >
           <TileLayer
+            url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
+            attribution='&copy; <a href="https://carto.com/">CartoDB</a>'
+          />
+
+          {/* <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             language="en"
@@ -108,7 +113,7 @@ export default function MapWrapper({ locations }) {
               minZoom: 2,
               maxZoom: 8
             }}
-          />
+          /> */}
           <CountryLayer locations={locations} />
           <MapController country={selectedCountry} />
         </MapContainer>
