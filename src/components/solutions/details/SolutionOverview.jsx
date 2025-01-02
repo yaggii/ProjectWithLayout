@@ -4,7 +4,7 @@ import { Search, Lightbulb, Globe2, Settings } from 'lucide-react';
 
 export default function SolutionOverview({ solution }) {
   return (
-    <div className="bg-white p-8">
+    <div className="bg-gray-50 p-8">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-3xl font-semibold">Overview</h2>
         <a

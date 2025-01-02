@@ -10,19 +10,19 @@ export default function DocumentationNav({ activeSection, onSectionChange }) {
   ];
 
   const inactiveClasses = [
-    'border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white',
-    'border-lime-500 text-lime-500 hover:bg-lime-500 hover:text-white',
-    'border-green-500 text-green-500 hover:bg-green-500 hover:text-white',
-    'border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white',
-    'border-gray-500 text-gray-500 hover:bg-gray-500 hover:text-white',
+    'border-rose-500 text-rose-500 hover:bg-rose-500 hover:text-white',
+    'border-emerald-700 text-emerald-700 hover:bg-emerald-700 hover:text-white',
+    'border-teal-700 text-teal-700 hover:bg-teal-700 hover:text-white',
+    'border-slate-600 text-slate-600 hover:bg-slate-600 hover:text-white',
+    'border-[#4c4e4c] text-[#4c4e4c] hover:bg-[#4c4e4c] hover:text-white',
   ];
 
   const activeClasses = [
-    'bg-teal-500 text-white border-teal-500',
-    'bg-lime-500 text-white border-lime-500',
-    'bg-green-500 text-white border-green-500',
-    'bg-orange-500 text-white border-orange-500',
-    'bg-gray-500 text-white border-gray-500',
+    'bg-rose-500 text-white border-rose-500',
+    'bg-emerald-700 text-white border-emerald-700',
+    'bg-teal-700 text-white border-teal-700',
+    'bg-slate-600 text-white border-slate-600',
+    'bg-[#4c4e4c] text-white border-[#4c4e4c]',
   ];
 
   return (
